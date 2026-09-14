@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://douckq2dtg7fl"]
+
+[ext_resource type="Script" uid="uid://b6g0g25i5kq7a" path="res://jotRenderer.gd" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://ceg5pwh8ybisj" path="res://cameraController.gd" id="2_0xm2m"]
+[ext_resource type="Script" uid="uid://nvbrgly0oi2o" path="res://uiControll.gd" id="3_h2yge"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0xm2m"]
+shading_mode = 0
+vertex_color_use_as_albedo = true
+
+[sub_resource type="SphereMesh" id="SphereMesh_h2yge"]
+material = SubResource("StandardMaterial3D_0xm2m")
+radius = 0.03
+height = 0.06
+radial_segments = 7
+rings = 4
+
+[sub_resource type="MultiMesh" id="MultiMesh_h2yge"]
+transform_format = 1
+mesh = SubResource("SphereMesh_h2yge")
+
+[sub_resource type="Environment" id="Environment_0xm2m"]
+background_mode = 1
+background_color = Color(1, 1, 1, 1)
+
+[node name="Node3D" type="Node3D" unique_id=841883409]
+
+[node name="MultiMeshInstance3D" type="MultiMeshInstance3D" parent="." unique_id=2023137404]
+multimesh = SubResource("MultiMesh_h2yge")
+script = ExtResource("1_ig7tw")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1331059594]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.03746505)
+script = ExtResource("2_0xm2m")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1628595170]
+environment = SubResource("Environment_0xm2m")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=572981497]
+script = ExtResource("3_h2yge")
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1316168359]
+offset_right = 162.0
+offset_bottom = 72.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+
+[node name="Label" type="Label" parent="." unique_id=494776325]
+offset_left = 4.0
+offset_top = 542.0
+offset_right = 159.0
+offset_bottom = 643.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+text = "obrót w 4D: z,x
+kamera: w,a,s,d,q,e
+wyjście kamery: esc
+wejście kamery: g"
