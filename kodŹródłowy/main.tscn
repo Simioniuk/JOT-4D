@@ -12,8 +12,8 @@ vertex_color_use_as_albedo = true
 material = SubResource("StandardMaterial3D_0xm2m")
 radius = 0.03
 height = 0.06
-radial_segments = 7
-rings = 4
+radial_segments = 4
+rings = 1
 
 [sub_resource type="MultiMesh" id="MultiMesh_h2yge"]
 transform_format = 1
@@ -28,10 +28,6 @@ background_color = Color(1, 1, 1, 1)
 [node name="MultiMeshInstance3D" type="MultiMeshInstance3D" parent="." unique_id=2023137404]
 multimesh = SubResource("MultiMesh_h2yge")
 script = ExtResource("1_ig7tw")
-
-[node name="Camera3D" type="Camera3D" parent="." unique_id=1331059594]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.03746505)
-script = ExtResource("2_0xm2m")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1628595170]
 environment = SubResource("Environment_0xm2m")
@@ -56,3 +52,7 @@ text = "obrót w 4D: z,x
 kamera: w,a,s,d,q,e
 wyjście kamery: esc
 wejście kamery: g"
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1331059594]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8.059608)
+script = ExtResource("2_0xm2m")
