@@ -10,13 +10,13 @@ Bierzemy dwa jot'y 2D i przy każdej iteracji gry w chaos zamieniamy wymiary (wi
 **#WZÓR NA JOT'A 2D**  
 bierzemy losową z trzech funkcji i gramy w chaos:  
 f1(xy) = 1/√3 * [0 1] [x] + [2]  
-                [1 0] [y] + [0]  
+----------------[1 0] [y] + [0]  
 
 f2(xy) = 1/√3 * [0 1] [x] + [-1]  
-                [1 0] [y] + [√3]  
+----------------[1 0] [y] + [√3]  
 
 f3(xy) = 1/√3 * [0 1] [x] + [-1]  
-                [1 0] [y] + [-√3]  
+----------------[1 0] [y] + [-√3]  
 Zasadniczo ma to bardzo dużo wspólnego z trójkątem sierpińskiego  
   
 **#WZÓR NA JOT'A W 4D**
