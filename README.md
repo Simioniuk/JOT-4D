@@ -19,7 +19,7 @@ f3(xy) = 1/√3 * [0 1] [x] + [-1]
 -----------------[1 0] [y] + [-√3]  
 Zasadniczo ma to bardzo dużo wspólnego z trójkątem sierpińskiego  
   
-**#WZÓR NA JOT'A W 4D**
+**#WZÓR NA JOT'A W 4D**  
 Po każdej iteracji robimy operacje:  
 x = (z+x) * 1/√2  
 y = (w+y) * 1/√2  
